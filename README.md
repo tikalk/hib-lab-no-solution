@@ -1,6 +1,6 @@
-Hibernate Tutorial Lab
+# Hibernate Tutorial Lab
 
-Preparation
+## Preparation
 
 The purpose of the following steps is to help you prepare the lab environment. 
 Please follow the steps bellow:
@@ -12,12 +12,12 @@ In Windows run: gradlew.bat eclipse.
 3. Please note that all the files needed to for the lab already exist, and you only have to fill them according the instructions – YOU SHOULD NOT CREATE ANY NEW FILES, PLEASE FILL EXISTING METHODS ONLY!!!.
 4. Now we can start the lab :) 
 
-Exercise 1a
+## Exercise 1a
 In this exercise we will use the class Person. This class will be used as a domain model class and will be saved, updated, deleted and read from the DB. A Person should have the following fields:
-id : java.lang.Integer – will serve as the Person identifier.
-name : java.lang.String – the person's name – will also be used as a “business key” for person.
-age : int – the person's age.
-address : com.tikal.sample.model.Address– A domain model class that is conceptually part of the Person – An address life cycle is bounded to the person life cycle (an instance of Address is always in the context of an owner Person instance).  The address class should contain city(String), street(String), houseNo(int) properties. These properties should have only getter methods (no setter). Add a constructor that accept these parameters.
+* id : java.lang.Integer – will serve as the Person identifier.
+* name : java.lang.String – the person's name – will also be used as a “business key” for person.
+* age : int – the person's age.
+* address : com.tikal.sample.model.Address– A domain model class that is conceptually part of the Person – An address life cycle is bounded to the person life cycle (an instance of Address is always in the context of an owner Person instance).  The address class should contain * city(String), street(String), houseNo(int) properties. These properties should have only getter methods (no setter). Add a constructor that accept these parameters.
 
 1. Just to check that everything is OK with your environment, run the HibernateTest (right-click on the file and click on “Run as”->”Junit Test”).
 2. Use the Person class located at src/main/java provided in the exercise and update its fields as defined above
@@ -31,15 +31,14 @@ address : com.tikal.sample.model.Address– A domain model class that is concept
 10. Map the Celebrity class – It should extend the Person class and should have famousName persistent property. Both Persons and Celebrities should be persisted in the same table. User the person_type column as a discriminator column. Run again the tests and make sure the Person table has 2 new columns : person_type and famousName (follow the create table statements).
 
 
+## Exercise 1b
+1. Create another domain object called Car with the following properties (Add getter and setters for the properties - setId should be private):
+    * id – java.lang.Integer – will serve as the Car identifier.
+    * serialNo – java.lang.String – a unique serial number comes with the car – use it as “business key” for Car.
+    * manufacturer – java.lang.String the manufacturer of the car.
+    * model – java.util.Date The creation date of the car.	
 
-Exercise 1b
-1. Create another domain object called Car with the following properties:
-id – java.lang.Integer – will serve as the Car identifier.
-serialNo – java.lang.String – a unique serial number comes with the car – use it as “business key” for Car.
-manufacturer – java.lang.String the manufacturer of the car.
-model – java.util.Date The creation date of the car.	
-
-	Add getter and setters for the properties (setId should be private).
+    
 2.  Run your Test and check your mapping is OK – see that a new table is created for the Car class.
 3. Add “cars” property of type java.util.Set to the Person class. Add getter and setters to the class.
 4. Map the cars as a oneToMany relationships between the Person and the Car.
@@ -50,4 +49,4 @@ model – java.util.Date The creation date of the car.
 8. Create a test that loads all persons (with their cars) that have cars belongs to “Volvo” manufacturer.
 
 
-Happy Coding!
+# Happy Coding!
