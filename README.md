@@ -6,11 +6,13 @@ The purpose of the following steps is to help you prepare the lab environment.
 Please follow the steps bellow:
 
 1. Run from the extracted folder the following command: 
-In Linux/MAC run: ./gradlew eclipse
-In Windows run: gradlew.bat eclipse.
+* In Linux/MAC run: ./gradlew eclipse
+* In Windows run: gradlew.bat eclipse.
 2. Now you can import the projects into the eclipse workspace
-3. Please note that all the files needed to for the lab already exist, and you only have to fill them according the instructions – YOU SHOULD NOT CREATE ANY NEW FILES, PLEASE FILL EXISTING METHODS ONLY!!!.
-4. Now we can start the lab :) 
+3. Please note that all the files needed to for the lab already exist, and you only have to fill them according the instructions
+
+# YOU SHOULD NOT CREATE ANY NEW FILES, PLEASE FILL EXISTING METHODS ONLY!!!.
+ 
 
 ## Exercise 1a
 In this exercise we will use the class Person. This class will be used as a domain model class and will be saved, updated, deleted and read from the DB. A Person should have the following fields:
